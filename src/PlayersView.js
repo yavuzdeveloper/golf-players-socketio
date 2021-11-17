@@ -3,29 +3,6 @@ import { Table, Input, Button, Form } from "semantic-ui-react";
 import { reducer } from "./reducer";
 import { socket } from "./socket";
 
-// const Data = [
-//   {
-//     First: "Birst1",
-//     Last: "Sast1",
-//     Match: 27,
-//     Nationality: "FRA",
-//     TotalStrokes: "71",
-//   },
-//   {
-//     First: "Airst2",
-//     Last: "Last2",
-//     Match: 66,
-//     Nationality: "ENG",
-//     TotalStrokes: "51",
-//   },
-//   {
-//     First: "Zirst3",
-//     Last: "Mast3",
-//     Match: 97,
-//     Nationality: "GER",
-//     TotalStrokes: "81",
-//   },
-// ];
 
 const PlayersView = () => {
   const fetchPlayers = () => {
@@ -125,13 +102,14 @@ const PlayersView = () => {
             >
               Last Name
             </Table.HeaderCell>
+            <Table.HeaderCell>Nationality</Table.HeaderCell>
             <Table.HeaderCell
               sorted={column === "Match" ? direction : null}
               onClick={() => dispatch({ type: "CHANGE_SORT", column: "Match" })}
             >
               Match
             </Table.HeaderCell>
-            <Table.HeaderCell>Nationality</Table.HeaderCell>
+
             <Table.HeaderCell
               sorted={column === "InStrokes" ? direction : null}
               onClick={() =>
@@ -165,8 +143,8 @@ const PlayersView = () => {
             ({
               First,
               Last,
-              Match,
               Nationality,
+              Match,
               TotalStrokes,
               InStrokes,
               OutStrokes,
@@ -176,8 +154,8 @@ const PlayersView = () => {
               <Table.Row key={Last}>
                 <Table.Cell>{First}</Table.Cell>
                 <Table.Cell>{Last}</Table.Cell>
-                <Table.Cell>{Match}</Table.Cell>
                 <Table.Cell>{Nationality}</Table.Cell>
+                <Table.Cell>{Match}</Table.Cell>
                 <Table.Cell>{InStrokes}</Table.Cell>
                 <Table.Cell>{OutStrokes}</Table.Cell>
                 <Table.Cell>{TotalStrokes}</Table.Cell>
@@ -193,38 +171,3 @@ const PlayersView = () => {
 };
 
 export default PlayersView;
-
-// Amature: 0;
-// CalculatedRankInteger: 2702;
-// Eastern: "0";
-// First: "Romain";
-// InSTP: 2;
-// InStrokes: 37;
-// Last: "Langasque";
-// MSTID: 39075;
-// Match: 27;
-// Nationality: "FRA";
-// OutSTP: -2;
-// OutStrokes: 34;
-// SOD: null;
-// Score: 0;
-// Sex: "M";
-// SortPriority: null;
-// TVName: "Langasque";
-// Today: 0;
-// TotalSTP: 0;
-// TotalStrokes: 71;
-// UniquePosition: 9999;
-// course: 1;
-// holesPlayed: 18;
-// isTeam: 0;
-// lastUpdated: "13:55.2";
-// leaderboardID: 184644;
-// matchID: 99805;
-// orderInMatch: 2;
-// position: 26;
-// round: 1;
-// status: 1;
-// teeStart: 1;
-// teeTime: "56:00.0";
-// tournamentID: 2020009;
